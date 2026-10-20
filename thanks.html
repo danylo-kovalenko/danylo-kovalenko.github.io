@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thank you · Danylo Kovalenko</title>
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<style>main{min-height:100dvh;display:grid;place-items:center;text-align:center;padding:40px 22px}main .lede{margin-left:auto;margin-right:auto}main .pill{margin-top:32px}</style>
+</head>
+<body>
+<main>
+  <div>
+    <h1 class="title big" id="t">Thank you.</h1>
+    <p class="lede" id="d">Your message is on its way. I'll get back to you personally, usually with a first idea.</p>
+    <a class="pill" href="/" id="b">Back to the site</a>
+  </div>
+</main>
+<script>
+const M={uk:['Дякую.','Ваше повідомлення надіслано. Я особисто відповім вам, зазвичай одразу з першою ідеєю.','Повернутися на сайт'],ru:['Спасибо.','Ваше сообщение отправлено. Я лично отвечу вам, обычно сразу с первой идеей.','Вернуться на сайт'],tr:['Teşekkürler.','Mesajınız yola çıktı. Size kişisel olarak, genellikle ilk bir fikirle dönüş yapacağım.','Siteye dön']};
+let l=null;try{l=localStorage.getItem('lang')}catch(e){}
+if(M[l]){document.documentElement.lang=l;['t','d','b'].forEach((id,i)=>document.getElementById(id).textContent=M[l][i]);document.getElementById('b').href='/?lang='+l}
+</script>
+</body>
+</html>
